@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@import "@skeletonlabs/skeleton"; /* [!code ++] */
+@import "@skeletonlabs/skeleton-svelte"; /* [!code ++] */
+@import "@skeletonlabs/skeleton/themes/pine"; /* [!code ++] */
+/* @import '@skeletonlabs/skeleton'; */
+@plugin "@tailwindcss/forms";
+
+body {
+}
