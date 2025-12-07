@@ -3,12 +3,10 @@
 	import ItemsList from "./ItemsList.svelte";
 	import { ItemTypeEnum, type IItem } from "../../models/Item";
 	import NewItem from "./NewItem.svelte";
-	
 
 	let currentDate = new Date();
 
 	let { selectedDate } = $props();
-	
 
 	let itemList: IItem[] = $state([
 		{
@@ -64,15 +62,9 @@
 	};
 </script>
 
-<div id="itemsWrapper" class="rounded-md p-5">
+<div class="rounded-md preset-filled-surface-400-600 p-5">
 	<NewItem callback={addNewitem} />
 	<div class="mt-5">
-		<ItemsList items={itemList} removeItemCallback={removeItem} {selectedDate}/>
+		<ItemsList items={itemList} removeItemCallback={removeItem} {selectedDate} />
 	</div>
 </div>
-
-<style>
-	#itemsWrapper {
-		background-color: var(--color-tertiary-500);
-	}
-</style>

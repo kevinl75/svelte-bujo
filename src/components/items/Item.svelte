@@ -13,8 +13,8 @@
 	}
 </script>
 
-<div class="group/sub preset-filled-primary-800 my-2 flex items-center card">
-	<button onclick={() => setToDone()} class="flex-none">
+<div class="group/sub my-2 flex items-center card preset-filled-secondary-200-800 py-2">
+	<button onclick={() => setToDone()} class="ml-5 flex-none">
 		{#if item.itemType == ItemTypeEnum.EVENT}
 			{#if item.isDone}
 				<CircleCheckBig />
@@ -32,7 +32,7 @@
 	<p class="mx-5 text-lg {item.isDone ? 'line-through' : ''} flex-1">{item.itemContent}</p>
 	<button
 		onclick={() => removeItemCallback(item)}
-		class="flex-none opacity-0 group-hover/sub:opacity-100"
+		class="mr-5 flex-none opacity-0 group-hover/sub:opacity-100"
 	>
 		<X />
 	</button>

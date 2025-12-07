@@ -1,7 +1,8 @@
 <script lang="ts">
 	import "./app.css";
-	import Header from "./components/Header.svelte";
+	import DatePickerTitle from "./components/DatePickerTitle.svelte";
 	import ItemsWrapper from "./components/items/ItemsWrapper.svelte";
+	import NavBar from "./components/NavBar.svelte";
 
 	let selectedDate: Date = $state(new Date());
 
@@ -10,16 +11,19 @@
 	}
 
 	function getSelectedDate() {
-		return selectedDate
+		return selectedDate;
 	}
 </script>
 
 <main>
-	<div class="pb-4">
-		<Header {getSelectedDate} {setSelectedDate} />
+	<NavBar />
+	<div class="m-auto max-w-5xl object-top pt-10">
+		<div class="flex pb-4">
+			<h2 class="mb-4 grow h2">Daily Log</h2>
+			<DatePickerTitle {getSelectedDate} {setSelectedDate} />
+		</div>
+		<ItemsWrapper {selectedDate} />
 	</div>
-	<hr class="hr" />
-	<ItemsWrapper {selectedDate} />
 </main>
 
 <style>

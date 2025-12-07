@@ -17,15 +17,15 @@
 	}
 </script>
 
-<div class="flex items-center justify-between">
+<div class="flex grow items-center justify-between">
 	<button onclick={() => setSelectedDate(addDay(getSelectedDate(), -1))}>
 		<ChevronLeft class="ml-2 h-10 w-10" />
 	</button>
 	<div class="flex items-center">
-		<h2 class="h2">{format(getSelectedDate(), dateFormat)}</h2>
+		<h2 class="h3">{format(getSelectedDate(), dateFormat)}</h2>
 		<DatePicker bind:isOpen onDateChange={setDateFromDatePicker}>
 			<button onclick={toggleDatePicker} class="ml-4">
-				<CalendarDays class="h-15 w-15 p-2" />
+				<CalendarDays class="h-12 w-12 p-2" />
 			</button>
 		</DatePicker>
 	</div>

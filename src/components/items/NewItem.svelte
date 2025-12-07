@@ -37,31 +37,34 @@
 <!-- grid-cols-[auto_1fr_auto] -->
 
 <div class="flex">
-	<div class="mr-2 flex rounded-md p-2" id="newItemsIcons">
+	<div class="mr-2 flex rounded-md preset-filled-secondary-200-800 p-2" id="newItemsIcons">
 		<button
-			id={newTypeItem == ItemTypeEnum.TASK ? "newItemIcon" : ""}
 			onclick={() => chooseItemType(ItemTypeEnum.TASK)}
-			class="rounded-md"
+			class="rounded-md {newTypeItem == ItemTypeEnum.TASK
+				? 'preset-filled-secondary-800-200'
+				: ''}"
 		>
 			<Square class="h-10 w-10 p-2 " />
 		</button>
 		<button
-			id={newTypeItem == ItemTypeEnum.EVENT ? "newItemIcon" : ""}
 			onclick={() => chooseItemType(ItemTypeEnum.EVENT)}
-			class="rounded-md"
+			class="rounded-md {newTypeItem == ItemTypeEnum.EVENT
+				? 'preset-filled-secondary-800-200'
+				: ''}"
 		>
 			<Circle class="h-10 w-10 p-2" />
 		</button>
 		<button
-			id={newTypeItem == ItemTypeEnum.NOTE ? "newItemIcon" : ""}
 			onclick={() => chooseItemType(ItemTypeEnum.NOTE)}
-			class="rounded-md"
+			class="rounded-md {newTypeItem == ItemTypeEnum.NOTE
+				? 'preset-filled-secondary-800-200'
+				: ''}"
 		>
 			<Minus class="h-10 w-10 rounded-md p-2" />
 		</button>
 	</div>
 	<input
-		class="ig-input"
+		class="ig-input rounded-md preset-outlined-secondary-200-800"
 		type="text"
 		bind:value={itemContent}
 		{placeholder}
@@ -70,10 +73,10 @@
 </div>
 
 <style>
-	#newItemsIcons {
-		background-color: var(--color-surface-950);
+	::placeholder {
+		color: var(--color-primary-50);
 	}
-	#newItemIcon {
-		background-color: var(--color-surface-800);
+	input[type="text"]:focus {
+		border: 2px solid var(--color-secondary-500);
 	}
 </style>

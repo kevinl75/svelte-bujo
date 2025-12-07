@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-@import "@skeletonlabs/skeleton"; /* [!code ++] */
-@import "@skeletonlabs/skeleton-svelte"; /* [!code ++] */
-@import "@skeletonlabs/skeleton/themes/pine"; /* [!code ++] */
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton-svelte";
+/* @import "@skeletonlabs/skeleton/themes/nosh"; */
+/* @import "@skeletonlabs/skeleton/themes/fennec"; */
+/* @import "@skeletonlabs/skeleton/themes/pine"; */
+@import "@skeletonlabs/skeleton/themes/rocket";
 /* @import '@skeletonlabs/skeleton'; */
 @plugin "@tailwindcss/forms";
 
